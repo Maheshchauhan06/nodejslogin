@@ -9,7 +9,7 @@ let sendEmail = new Utils();
 
 class UserController{
 
-    async home(){
+    async home(req,res){
         try {
             res.redirect("/login",{query:""});
         } catch (error) {
