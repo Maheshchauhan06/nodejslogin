@@ -8,6 +8,17 @@ const path = require('path');
 let sendEmail = new Utils();
 
 class UserController{
+
+    async home(){
+        try {
+            res.redirect("/login",{query:""});
+        } catch (error) {
+            res.status(400).json({
+                success:false,
+                message:error.message
+            });
+        }
+    }
     // Register controller
     async register(req,res){
         try {

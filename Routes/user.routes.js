@@ -8,6 +8,7 @@ const userControllerObj = new UserController();
 const userMiddlewareObj = new UserMiddleware();
 
 // GET routes
+router.get("/",userControllerObj.home)
 router.get("/registration",userMiddlewareObj.unAuth,userControllerObj.callRegisterView);
 router.get("/verifyEmail/:evtk",userMiddlewareObj.unAuth,userControllerObj.verifyEmail);
 router.get("/login",userMiddlewareObj.unAuth,userControllerObj.callLoginView);
