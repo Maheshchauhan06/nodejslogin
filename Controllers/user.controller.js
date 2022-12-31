@@ -11,7 +11,7 @@ class UserController{
 
     async home(req,res){
         try {
-            res.redirect("/login",{query:""});
+            res.render("login",{query:""});
         } catch (error) {
             res.status(400).json({
                 success:false,
